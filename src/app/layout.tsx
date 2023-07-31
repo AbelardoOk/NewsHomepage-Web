@@ -1,3 +1,4 @@
+import { Header } from "@/components/header";
 import "./globals.css";
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
@@ -12,7 +13,12 @@ export const metadata: Metadata = {
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="en">
-      <body className={`${inter.className} font-sans text-[15px] bg-neutral-white`}>{children}</body>
+      <body
+        className={`${inter.className} font-sans text-[15px] bg-neutral-white text-neutral-darkBlue h-screen mx-28 my-16`}
+      >
+        <Header />
+        {children}
+      </body>
     </html>
   );
 }
