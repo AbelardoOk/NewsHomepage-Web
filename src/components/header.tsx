@@ -1,7 +1,7 @@
 import { Logo } from "../../public/logo";
 export function Header() {
   return (
-    <header className="flex justify-between items-center">
+    <header className="flex justify-between items-center bg-neutral-white px-28 py-16">
       <Logo />
       <div className="flex justify-between font-normal gap-8">
         <a href="">Home</a>
