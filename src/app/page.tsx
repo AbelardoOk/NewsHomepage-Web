@@ -4,12 +4,12 @@ import { TopNews } from "@/components/topNews";
 import Image from "next/image";
 export default function Home() {
   return (
-    <main className="font-sans bg-neutral-white h-screen px-28">
+    <main className="font-sans bg-neutral-white h-full px-28">
       <div className="flex flex-row justify-between gap-8">
         <div className="flex flex-col gap-8">
           <Image src="/image-web-3-desktop.jpg" alt="" width={1460} height={600} />
           <div className="flex flex-row justify-between">
-            <h1 className="text-left font-extrabold text-4xl text-neutral-veryDarkBlue">
+            <h1 className="text-left font-extrabold text-5xl text-neutral-veryDarkBlue">
               The Bright Future of Web 3.0?
             </h1>
             <div className="flex justify-between flex-col items-start ml-12">
@@ -17,7 +17,9 @@ export default function Home() {
                 We dive into the next evolution of the web that claims to put the power of the platforms back into the
                 hands of the people. But is it really fulfilling its promise?
               </p>
-              <button className="px-12 py-3 font-bold text-neutral-white bg-primary-red">READ MORE</button>
+              <button className="px-12 py-3 font-bold text-neutral-white bg-primary-red hover:bg-neutral-veryDarkBlue transition duration-150">
+                READ MORE
+              </button>
             </div>
           </div>
         </div>
@@ -39,15 +41,25 @@ export default function Home() {
         </div>
       </div>
 
-      <div>
+      <div className="flex flex-row justify-between pt-16">
         <TopNews
-          image="image-retro-pcs.jpg"
-          number={1}
-          tittle="Reviving Retro PCsa"
+          image="/image-retro-pcs.jpg"
+          number="01"
+          tittle="Reviving Retro PCs"
           text="What happens when old PCs are given modern upgrades?"
         />
-        <TopNews />
-        <TopNews />
+        <TopNews
+          image="/image-top-laptops.jpg"
+          number="02"
+          tittle="Top 10 Laptops of 2022"
+          text="Our best picks for various need and budgets."
+        />
+        <TopNews
+          image="/image-gaming-growth.jpg"
+          number="03"
+          tittle="The Growth of Gaming"
+          text="How the pandemic has sparked fresh opportunities."
+        />
       </div>
     </main>
   );

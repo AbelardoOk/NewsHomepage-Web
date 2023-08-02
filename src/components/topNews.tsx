@@ -1,3 +1,4 @@
+import Image from "next/image";
 export function TopNews({
   tittle,
   text,
@@ -7,14 +8,16 @@ export function TopNews({
   tittle: string;
   text: string;
   image: string;
-  number: number;
+  number: string;
 }) {
   return (
     <div className="flex flex-row gap-4">
-      <Image src={image} alt="" width={200} height={200} />
-      <div className="flex flex-col justify-between items-start">
-        <h2 className="font-bold text-xl text-neutral-darkBlue">{number}</h2>
-        <h3 className="font-bold text-lg text-neutral-veryDarkBlue">{tittle}</h3>
+      <Image className="h-1/2 w-fit" src={image} alt="" width={200} height={200} />
+      <div className="flex h-1/2 flex-col justify-between items-start">
+        <h2 className="font-bold text-3xl text-neutral-darkBlue">{number}</h2>
+        <a className="cursor-pointer font-bold text-lg text-neutral-veryDarkBlue hover:text-primary-red transition duration-150">
+          {tittle}
+        </a>
         <p>{text}</p>
       </div>
     </div>
